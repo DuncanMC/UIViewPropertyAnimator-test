@@ -13,7 +13,7 @@ class ViewController: UIViewController {
   
   //MARK: - IBOutlets
   
-  @IBOutlet weak var leadingConstraint: NSLayoutConstraint!
+  @IBOutlet weak var centerConstraint: NSLayoutConstraint!
   @IBOutlet weak var animationSlider: UISlider!
   @IBOutlet weak var startStopButton: UIButton!
   @IBOutlet weak var resetButton: UIButton!
@@ -25,7 +25,7 @@ class ViewController: UIViewController {
   var animatingBackwards: Bool = false {
     didSet {
       viewAnimator.isReversed = animatingBackwards
-      reverseButton.isEnabled = !animatingBackwards
+      reverseButton.isEnabled = viewAnimator.state == .active && !viewAnimator.isRunning
       if animatingBackwards {
         animationDirectionLabel.text = NSLocalizedString("Backward", comment: "")
       } else {
@@ -49,10 +49,10 @@ class ViewController: UIViewController {
   }
   
   let animationDuration = 2.0
+  
   weak var timer: Timer?
   
   //MARK: - Overridden instance methods
-  
   override func viewDidLoad() {
     super.viewDidLoad()
     viewAnimator = UIViewPropertyAnimator(duration: animationDuration, curve: .easeInOut)
@@ -91,8 +91,6 @@ class ViewController: UIViewController {
   
   @IBAction func handleReverseButton(_ sender: UIButton) {
     animatingBackwards = !animatingBackwards
-//    viewAnimator.isReversed = !viewAnimator.isReversed
-//    sender.isEnabled = false
   }
   
   @IBAction func handleStartStopButton(_ sender: UIButton) {
@@ -104,15 +102,15 @@ class ViewController: UIViewController {
       reverseButton.isEnabled = true
 
       animationIsRunning = true
-      leadingConstraint.constant = 20
+      centerConstraint.constant = 30
       self.view.layoutIfNeeded()
       viewAnimator.addAnimations {
-        [weak leadingConstraint, weak self] in
-        guard let strongLeadingConstraint = leadingConstraint,
+        [weak centerConstraint, weak self] in
+        guard let strongCenterConstraint = centerConstraint,
           let strongSelf = self else {
             return
         }
-        strongLeadingConstraint.constant = strongSelf.view.bounds.width - strongSelf.imageView.bounds.width - 20
+        strongCenterConstraint.constant = strongSelf.view.bounds.width - 30
         strongSelf.view.layoutIfNeeded()
       }
       viewAnimator.addCompletion() {
@@ -128,6 +126,7 @@ class ViewController: UIViewController {
         resetButton.isEnabled = true
       } else {
         viewAnimator.startAnimation()
+        reverseButton.isEnabled = !animatingBackwards
         animationIsRunning = true
         
       }
@@ -140,14 +139,14 @@ class ViewController: UIViewController {
   }
   
   @IBAction func handleResetButton(_ sender: UIButton?) {
+    animatingBackwards = false
     resetButton.isEnabled = false
     viewAnimator.stopAnimation(true)
     reverseButton.isEnabled = false
     animationSlider.isEnabled = false
     animationIsRunning = false
-    leadingConstraint.constant = 20
+    centerConstraint.constant = 30
     animationSlider.value = 0.0
     view.layoutIfNeeded()
-    animatingBackwards = false
   }
 }

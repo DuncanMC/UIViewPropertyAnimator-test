@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -22,7 +23,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WareTo Icon" translatesAutoresizingMaskIntoConstraints="NO" id="n2Z-jN-7oy">
-                                <rect key="frame" x="10" y="30" width="60" height="60"/>
+                                <rect key="frame" x="0.0" y="30" width="60" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="W6g-az-yOO"/>
                                     <constraint firstAttribute="height" constant="60" id="hjI-dA-ruv"/>
@@ -64,7 +65,7 @@
                                 </subviews>
                             </stackView>
                             <slider opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="NpQ-b4-uxN">
-                                <rect key="frame" x="18" y="552.5" width="339" height="31"/>
+                                <rect key="frame" x="13" y="552.5" width="349" height="31"/>
                                 <connections>
                                     <action selector="handleSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="ewR-X6-e17"/>
                                 </connections>
@@ -89,14 +90,13 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="NpQ-b4-uxN" secondAttribute="trailing" constant="20" id="5Cn-tv-tBp"/>
+                            <constraint firstAttribute="trailing" secondItem="NpQ-b4-uxN" secondAttribute="trailing" constant="15" id="5Cn-tv-tBp"/>
                             <constraint firstItem="n2Z-jN-7oy" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="5ns-yJ-68H"/>
                             <constraint firstItem="5Ks-oj-Mr3" firstAttribute="top" secondItem="NpQ-b4-uxN" secondAttribute="bottom" constant="10" id="Bqp-uk-M8X"/>
-                            <constraint firstItem="NpQ-b4-uxN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="CAm-gQ-wFw"/>
+                            <constraint firstItem="NpQ-b4-uxN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="15" id="CAm-gQ-wFw"/>
                             <constraint firstItem="TOj-tM-vDM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HSK-sX-yIh"/>
-                            <constraint firstItem="n2Z-jN-7oy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="Lg7-c4-l7Y"/>
+                            <constraint firstItem="n2Z-jN-7oy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="30" id="Lg7-c4-l7Y"/>
                             <constraint firstItem="5Ks-oj-Mr3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Nrx-yi-tNL"/>
-                            <constraint firstAttribute="trailing" secondItem="NpQ-b4-uxN" secondAttribute="trailing" constant="20" id="cvW-vb-Xgw"/>
                             <constraint firstItem="TOj-tM-vDM" firstAttribute="top" secondItem="5Ks-oj-Mr3" secondAttribute="bottom" constant="10" id="d9F-wB-dTh"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="TOj-tM-vDM" secondAttribute="bottom" constant="20" id="hO5-c7-gon"/>
                         </constraints>
@@ -104,8 +104,8 @@
                     <connections>
                         <outlet property="animationDirectionLabel" destination="LV5-jT-jnr" id="vPF-bu-sBP"/>
                         <outlet property="animationSlider" destination="NpQ-b4-uxN" id="2i0-qj-6UR"/>
+                        <outlet property="centerConstraint" destination="Lg7-c4-l7Y" id="mDb-Ie-f3d"/>
                         <outlet property="imageView" destination="n2Z-jN-7oy" id="3ep-9C-LdP"/>
-                        <outlet property="leadingConstraint" destination="Lg7-c4-l7Y" id="shs-j2-s2E"/>
                         <outlet property="resetButton" destination="K1q-hI-Qcf" id="b3f-kP-QHN"/>
                         <outlet property="reverseButton" destination="Smv-E3-ccR" id="YVa-IG-zvG"/>
                         <outlet property="startStopButton" destination="P4b-gF-eYc" id="pdb-Fs-mBV"/>
