@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AE15E33B1DFA34DE0022850D /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = AE15E33A1DFA34DE0022850D /* README.md */; };
+		AE15E3501DFB3AE00022850D /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE15E34F1DFB3AE00022850D /* UIViewExtensions.swift */; };
 		AE8013F81DF8F1A2001F7C65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8013F71DF8F1A2001F7C65 /* AppDelegate.swift */; };
 		AE8013FA1DF8F1A2001F7C65 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8013F91DF8F1A2001F7C65 /* ViewController.swift */; };
 		AE8013FD1DF8F1A2001F7C65 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE8013FB1DF8F1A2001F7C65 /* Main.storyboard */; };
@@ -17,6 +17,7 @@
 
 /* Begin PBXFileReference section */
 		AE15E33A1DFA34DE0022850D /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		AE15E34F1DFB3AE00022850D /* UIViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIViewExtensions.swift; path = ../../Swift3PhoneTest/Swift3PhoneTest/UIViewExtensions.swift; sourceTree = "<group>"; };
 		AE8013F41DF8F1A2001F7C65 /* UIVIew PropertyAnimator test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UIVIew PropertyAnimator test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE8013F71DF8F1A2001F7C65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE8013F91DF8F1A2001F7C65 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "\U0010\U0010\U0010\U0010\U0010\U0010ViewController.swift"; sourceTree = "<group>"; };
@@ -56,6 +57,7 @@
 		AE8013F61DF8F1A2001F7C65 /* UIVIew PropertyAnimator test */ = {
 			isa = PBXGroup;
 			children = (
+				AE15E34F1DFB3AE00022850D /* UIViewExtensions.swift */,
 				AE15E33A1DFA34DE0022850D /* README.md */,
 				AE8013F71DF8F1A2001F7C65 /* AppDelegate.swift */,
 				AE8013F91DF8F1A2001F7C65 /* ViewController.swift */,
@@ -140,8 +142,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE15E33B1DFA34DE0022850D /* README.md in Sources */,
 				AE8013FA1DF8F1A2001F7C65 /* ViewController.swift in Sources */,
+				AE15E3501DFB3AE00022850D /* UIViewExtensions.swift in Sources */,
 				AE8013F81DF8F1A2001F7C65 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
