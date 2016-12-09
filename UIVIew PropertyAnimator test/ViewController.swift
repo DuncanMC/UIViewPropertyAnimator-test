@@ -13,6 +13,7 @@ class ViewController: UIViewController {
   
   //MARK: - IBOutlets
   
+  ///This constraint controls the center x of the image view we're animating
   @IBOutlet weak var centerConstraint: NSLayoutConstraint!
   @IBOutlet weak var animationSlider: UISlider!
   @IBOutlet weak var startStopButton: UIButton!
@@ -22,6 +23,7 @@ class ViewController: UIViewController {
   @IBOutlet weak var animationDirectionLabel: UILabel!
   //MARK: - Properties
   
+  ///This property keeps track of whether we're animating backwards or forwards
   var animatingBackwards: Bool = false {
     didSet {
       viewAnimator.isReversed = animatingBackwards
@@ -53,12 +55,17 @@ class ViewController: UIViewController {
   weak var timer: Timer?
   
   //MARK: - Overridden instance methods
+  
+  override func viewWillDisappear(_ animated: Bool) {
+    startTimer(false) //make sure our timer isn't running when we leave this ViewController
+  }
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     viewAnimator = UIViewPropertyAnimator(duration: animationDuration, curve: .easeInOut)
     viewAnimator.isInterruptible = true
-    }
-  
+  }
+
   //MARK: - Custom Instance Methods
   
   func startTimer(_ start: Bool) {
