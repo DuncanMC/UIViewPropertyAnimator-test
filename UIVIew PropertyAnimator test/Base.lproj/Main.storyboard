@@ -68,13 +68,13 @@
                                 </subviews>
                             </stackView>
                             <slider opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="NpQ-b4-uxN">
-                                <rect key="frame" x="8" y="441.5" width="359" height="31"/>
+                                <rect key="frame" x="8" y="451.5" width="359" height="31"/>
                                 <connections>
                                     <action selector="handleSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="ewR-X6-e17"/>
                                 </connections>
                             </slider>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Ks-oj-Mr3">
-                                <rect key="frame" x="106" y="582.5" width="163.5" height="14.5"/>
+                                <rect key="frame" x="106" y="592.5" width="163.5" height="14.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Animation direction: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M8Q-Ay-I8u">
                                         <rect key="frame" x="0.0" y="0.0" width="117" height="14.5"/>
@@ -91,37 +91,37 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Use Spring Animation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i0d-1B-icn">
-                                <rect key="frame" x="10" y="481.5" width="165.5" height="20.5"/>
+                                <rect key="frame" x="10" y="491.5" width="165.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cr7-P7-ZGy">
-                                <rect key="frame" x="185" y="476.5" width="51" height="31"/>
+                                <rect key="frame" x="185" y="486.5" width="51" height="31"/>
                                 <connections>
                                     <action selector="handleDampingSwitch:" destination="BYZ-38-t0r" eventType="valueChanged" id="xwE-q0-9T3"/>
                                 </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Animation Progress" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ihf-4S-9gP">
-                                <rect key="frame" x="113" y="421" width="149" height="20.5"/>
+                                <rect key="frame" x="113" y="431" width="149" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.29999999999999999" minValue="0.01" maxValue="1.2" translatesAutoresizingMaskIntoConstraints="NO" id="Yjh-Qx-jok">
-                                <rect key="frame" x="50" y="542.5" width="317" height="31"/>
+                                <rect key="frame" x="50" y="552.5" width="317" height="31"/>
                                 <connections>
                                     <action selector="handleDampingSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="tUM-j3-fcj"/>
                                 </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spring damping factor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="geN-gC-vYc">
-                                <rect key="frame" x="145.5" y="528" width="126.5" height="14.5"/>
+                                <rect key="frame" x="145.5" y="538" width="126.5" height="14.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.20" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KZz-gF-A83">
-                                <rect key="frame" x="10" y="541.5" width="37" height="31"/>
+                                <rect key="frame" x="10" y="551.5" width="37" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="31" id="dcq-on-GBR"/>
                                     <constraint firstAttribute="width" constant="37" id="h28-4o-C2I"/>
@@ -158,7 +158,7 @@
                             <constraint firstItem="NpQ-b4-uxN" firstAttribute="top" secondItem="ihf-4S-9gP" secondAttribute="bottom" id="bBW-dp-KVN"/>
                             <constraint firstItem="geN-gC-vYc" firstAttribute="top" secondItem="Cr7-P7-ZGy" secondAttribute="bottom" constant="20" id="cI9-Yb-rdg"/>
                             <constraint firstItem="i0d-1B-icn" firstAttribute="leading" secondItem="NpQ-b4-uxN" secondAttribute="leading" id="d3r-ql-8Vc"/>
-                            <constraint firstItem="TOj-tM-vDM" firstAttribute="top" secondItem="5Ks-oj-Mr3" secondAttribute="bottom" constant="10" id="d9F-wB-dTh"/>
+                            <constraint firstItem="TOj-tM-vDM" firstAttribute="top" secondItem="5Ks-oj-Mr3" secondAttribute="bottom" id="d9F-wB-dTh"/>
                             <constraint firstItem="Yjh-Qx-jok" firstAttribute="centerX" secondItem="geN-gC-vYc" secondAttribute="centerX" id="fug-Sp-DOk"/>
                             <constraint firstItem="Yjh-Qx-jok" firstAttribute="top" secondItem="geN-gC-vYc" secondAttribute="bottom" id="fur-eb-LRG"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="TOj-tM-vDM" secondAttribute="bottom" constant="20" id="hO5-c7-gon"/>
