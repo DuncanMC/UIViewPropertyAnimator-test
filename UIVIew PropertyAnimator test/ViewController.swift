@@ -101,7 +101,7 @@ class ViewController: UIViewController {
                                             dampingRatio: springDampingRatio)
     } else {
       print("Using ease in/out animation")
-      viewAnimator = UIViewPropertyAnimator(duration: animationDuration, curve: .linear)
+      viewAnimator = UIViewPropertyAnimator(duration: animationDuration, curve: .easeInOut)
     }
   }
   
@@ -160,41 +160,16 @@ class ViewController: UIViewController {
         reverseButton.isEnabled = true
         
         animationIsRunning = true
-        //centerConstraint.constant = margin
+        centerConstraint.constant = margin
         self.view.layoutIfNeeded()
         viewAnimator.addAnimations {
-          [weak self] in
-          guard let strongSelf = self
-          else {
+          [weak centerConstraint, weak self] in
+          guard let strongCenterConstraint = centerConstraint,
+            let strongSelf = self else {
               return
           }
-          //strongSelf.imageView.transform = CGAffineTransform(rotationAngle: CGFloat.pi)
-          UIView.animateKeyframes(withDuration: strongSelf.animationDuration,
-                                  delay: 0,
-                                  options: [.calculationModeLinear],
-                                  animations: {
-            UIView.addKeyframe(withRelativeStartTime: 0,  relativeDuration: 0.25) {
-              strongSelf.imageView.transform = CGAffineTransform(rotationAngle: CGFloat.pi / 2)
-            }
-            UIView.addKeyframe(withRelativeStartTime: 0.25,  relativeDuration: 0.25) {
-              strongSelf.imageView.transform = CGAffineTransform(rotationAngle: CGFloat.pi)
-            }
-            UIView.addKeyframe(withRelativeStartTime: 0.5,  relativeDuration: 0.25) {
-              strongSelf.imageView.transform = CGAffineTransform(rotationAngle: CGFloat.pi * 3.0/2.0)
-            }
-            UIView.addKeyframe(withRelativeStartTime: 0.75, relativeDuration: 0.25) {
-              strongSelf.imageView.transform = CGAffineTransform(rotationAngle: CGFloat.pi * 2.0)
-            }
-          }
-//                                  ,completion: {
-//                                    completed in
-//                                    strongSelf.imageView.transform = CGAffineTransform.identity
-//          }
-          )
-
-          
-//          strongCenterConstraint.constant = strongSelf.view.center.y
-//          strongSelf.view.layoutIfNeeded()
+          strongCenterConstraint.constant = strongSelf.view.center.y
+          strongSelf.view.layoutIfNeeded()
         }
         viewAnimator.addCompletion() {
           (animatingPosition) in
@@ -231,12 +206,9 @@ class ViewController: UIViewController {
     reverseButton.isEnabled = false
     animationSlider.isEnabled = false
     animationIsRunning = false
-//    self.imageView.transform = CGAffineTransform.identity
+    centerConstraint.constant = margin
     UIView.animate(withDuration: 0.2){
-      self.imageView.transform = CGAffineTransform.identity
-      
-      //centerConstraint.constant = margin
-      //self.view.layoutIfNeeded()
+      self.view.layoutIfNeeded()
     }
     animationSlider.value = 0.0
     view.layoutIfNeeded()
