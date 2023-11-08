@@ -14,7 +14,7 @@ class ViewController: UIViewController {
   var useSpringAnimation = true
 
   let margin: CGFloat =             30.00
-  var animationDuration =            1.00
+  var animationDuration =            1.0
   var springDampingRatio: CGFloat =  0.30 {
     didSet {
       dampingFactorLabel.text = String(format: "%.02f", springDampingRatio)
