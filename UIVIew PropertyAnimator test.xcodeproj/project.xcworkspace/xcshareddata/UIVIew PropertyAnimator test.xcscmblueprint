@@ -1,0 +1,23 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "4095A9FC3B230CD409B7E6CFACF63EE87F768524",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "4095A9FC3B230CD409B7E6CFACF63EE87F768524" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "3ABBAFC7-37F5-4CC3-B6A2-FBBF75AE3134",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "4095A9FC3B230CD409B7E6CFACF63EE87F768524" : "UIVIew%20PropertyAnimator%20test\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "UIVIew PropertyAnimator test",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "UIVIew PropertyAnimator test.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/DuncanMC\/UIViewPropertyAnimator-test.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "4095A9FC3B230CD409B7E6CFACF63EE87F768524"
+    }
+  ]
+}
